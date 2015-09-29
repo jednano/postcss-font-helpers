@@ -11,6 +11,20 @@ tape('postcss-font-helpers', function(t) {
 		'}'
 	].join('')).first;
 
+	t.deepEqual(
+		font(rule),
+		{
+			style: 'italic',
+			variant: 'none',
+			weight: '500',
+			stretch: 'condensed',
+			size: '1rem',
+			lineHeight: '100%',
+			family: ['serif']
+		},
+		'resolves all props into an object'
+	);
+
 	t.equal(
 		font.style(rule),
 		'italic',
@@ -65,6 +79,20 @@ tape('postcss-font-helpers', function(t) {
 		'  font-family: sans-serif;',
 		'}'
 	].join('')).first;
+
+	t.deepEqual(
+		font(rule),
+		{
+			style: 'oblique',
+			variant: 'small-caps',
+			weight: '300',
+			stretch: 'ultra-condensed',
+			size: '1.5rem',
+			lineHeight: '150%',
+			family: ['sans-serif']
+		},
+		'accumulates all resolved props into an object'
+	);
 
 	t.equal(
 		font.style(rule),

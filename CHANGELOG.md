@@ -1,3 +1,6 @@
+## 2.1.0
+- Module function call returns an object with all font properties.
+
 ## 2.0.0
 - Use [`tcomb-postcss](https://github.com/jedmao/tcomb-postcss) to enforce PostCSS types.
 

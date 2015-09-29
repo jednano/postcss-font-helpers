@@ -32,6 +32,16 @@ var rule = postcss.parse([
 	'}'
 ].join('')).first;
 
+// Get all props
+font(rule); /*
+{
+	size: ".8rem",
+	line-height: 1.2,
+	family: ["serif"]
+}
+*/
+
+// Get individual props
 font.lineHeight(rule); // 1.2
 font.size(rule);       // ".8rem"
 font.family(rule);     // ["serif"]
