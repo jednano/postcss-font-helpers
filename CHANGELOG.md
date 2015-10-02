@@ -1,3 +1,6 @@
+## 3.0.0
+- Preserve functions with spaces and commas inside.
+
 ## 2.1.0
 - Module function call returns an object with all font properties.
 
